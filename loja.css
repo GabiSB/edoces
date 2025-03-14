@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background-color: rgb(255, 153, 200);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(252, 246, 189);
+    position: relative;
+}
+
+/* Logo e nome no lado esquerdo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre a logo e o texto */
+}
+
+.logo-container i {
+    font-size: 40px;
+    color: rgb(244, 142, 159);
+}
+
+.logo-container h1 {
+    font-size: 24px;
+    color: rgb(244, 142, 159);
+    margin: 0; /* Remove margens padrão do h1 */
+}
+
+/* Barra de pesquisa no meio */
+.search-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(255, 153, 200);
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.search-input:focus {
+    border-color: rgb(255, 153, 200);
+    box-shadow: 0 0 8px rgb(228, 193, 249);
+}
+
+.search-button {
+    margin-left: 8px;
+    padding: 10px 15px;
+    background-color: rgb(255, 153, 200);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: rgb(228, 193, 249);
+}
+
+/* Menu de navegação */
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgb(244, 142, 159);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: rgb(160, 84, 160);
+}
+
+/* Estilos do carrossel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+/* Botões de navegação */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(244, 142, 159, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(244, 142, 159, 1);
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main h3 {
+    color: rgb(252, 246, 189);
+    margin-bottom: 20px;
+}
+
+main p {
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos do rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(252, 246, 189);
+    color: rgb(244, 142, 159);
+    margin-top: 20px;
+}
+/* Estilos da caixa de produto */
+.produto1 {
+    background-color: rgb(252, 246, 189);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 250px;
+    padding: 20px;
+    margin-left: 45px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.produto2 {
+    background-color: rgb(252, 246, 189);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -600px;
+    left: 450px;
+    width: 250px;
+    padding: 20px;
+    margin-left: 45px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.produto-imagem {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produto-titulo {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.produto-descricao {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.produto-preco {
+    font-size: 1.2em;
+    color: rgb(255, 153, 200);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.produto-botao {
+    background-color: rgb(255, 153, 200);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.produto-botao:hover {
+    background-color: #c2185b;
+}
+
+.produto3 {
+    background-color: rgb(252, 246, 189);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -1207px;
+    left: 900px;
+    width: 250px;
+    padding: 20px;
+    margin-left: 45px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.produto-imagem {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produto-titulo {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.produto-descricao {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.produto-preco {
+    font-size: 1.2em;
+    color: rgb(255, 153, 200);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.produto-botao {
+    background-color: rgb(255, 153, 200);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.produto-botao:hover {
+    background-color: #c2185b;
+}
+
+.produto4 {
+    background-color: rgb(252, 246, 189);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -1207px;
+    left: 900px;
+    width: 250px;
+    padding: 20px;
+    margin-left: 45px;
+    margin-top: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.produto-imagem {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produto-titulo {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.produto-descricao {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.produto-preco {
+    font-size: 1.2em;
+    color: rgb(255, 153, 200);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.produto-botao {
+    background-color: rgb(255, 153, 200);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.produto-botao:hover {
+    background-color: #c2185b;
+}
+
+.produto5 {
+    background-color: rgb(252, 246, 189);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: -1830px;
+    left: 450px;
+    width: 250px;
+    padding: 20px;
+    margin-left: 45px;
+    margin-top: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.produto-imagem {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.produto-titulo {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.produto-descricao {
+    font-size: 0.9em;
+    color: #666;
+    margin: 10px 0;
+}
+
+.produto-preco {
+    font-size: 1.2em;
+    color: rgb(255, 153, 200);
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.produto-botao {
+    background-color: rgb(255, 153, 200);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.produto-botao:hover {
+    background-color: #c2185b;
+}

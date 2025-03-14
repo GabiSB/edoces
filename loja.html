@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAINHA DOS DOCES</title>
+    <link rel="stylesheet" href="loja.css">
+    <!-- Adicionando o Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <!-- Ícone de cupcake -->
+    <i class="fas fa-birthday-cake" style="position: absolute; left: 350px; font-size: 40px; color: rgb(244, 142, 159);"></i>
+    <H1 style="color: rgb(244, 142, 159)">RAINHA DOS DOCES</H1>
+    <nav class="menu">
+        <ul>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Digite sua pesquisa...">
+                <button class="search-button">Buscar</button>
+            </div>
+            <h1><li><a style="color: rgb(244, 142, 159);" href="#inter">entrar</a></li></h1>
+            <h1><li><a style="color: rgb(244, 142, 159);" href="#home">início</a></li></h1>
+            <h1><li><a style="color: rgb(244, 142, 159);" href="#carrinho">carrinho</a></li></h1>
+            <h1><li><a style="color: rgb(244, 142, 159);" href="#about">sobre</a></li></h1>
+            <h1><li><a style="color: rgb(244, 142, 159);" href="#cantact">contato</a></li></h1>
+        </ul>
+    </nav>
+</header>
+
+<!-- Banner de carrossel -->
+<div class="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="mousse-limao-ganache-copinho.jpg" alt="Doce 1">
+        </div>
+        <div class="carousel-item">
+            <img src="decoracao-bolo-simples.jpg" alt="Doce 2">
+        </div>
+        <div class="carousel-item">
+            <img src="shutterstock-1705403278.jpg" alt="Doce 3">
+        </div>
+    </div>
+    <!-- Botões de navegação -->
+    <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+</div>
+
+
+
+<div class="produto1">
+    <img src="bolo-de-chocolate-decorado-com-chantilly-e-cerejas-Foto-Food-Porn-Diary.jpg" alt="Bolo de Chocolate" class="produto-imagem">
+    <h2 class="produto-titulo">Bolo de Chocolate</h2>
+    <p class="produto-descricao">Delicioso bolo de chocolate com cobertura de ganache.</p>
+    <p class="produto-preco">R$ 45,00</p>
+    <button class="produto-botao">Comprar</button>
+</div>
+
+
+<div class="produto2">
+    <img src="bolo-de-chocolate-decorado-com-chantilly-e-cerejas-Foto-Food-Porn-Diary.jpg" alt="Bolo de Chocolate" class="produto-imagem">
+    <h2 class="produto-titulo">Bolo de Chocolate</h2>
+    <p class="produto-descricao">Delicioso bolo de chocolate com cobertura de ganache.</p>
+    <p class="produto-preco">R$ 45,00</p>
+    <button class="produto-botao">Comprar</button>
+</div>
+
+<div class="produto3">
+    <img src="bolo-de-chocolate-decorado-com-chantilly-e-cerejas-Foto-Food-Porn-Diary.jpg" alt="Bolo de Chocolate" class="produto-imagem">
+    <h2 class="produto-titulo">Bolo de Chocolate</h2>
+    <p class="produto-descricao">Delicioso bolo de chocolate com cobertura de ganache.</p>
+    <p class="produto-preco">R$ 45,00</p>
+    <button class="produto-botao">Comprar</button>
+</div>
+
+<div class="produto4">
+    <img src="bolo-de-chocolate-decorado-com-chantilly-e-cerejas-Foto-Food-Porn-Diary.jpg" alt="Bolo de Chocolate" class="produto-imagem">
+    <h2 class="produto-titulo">Bolo de Chocolate</h2>
+    <p class="produto-descricao">Delicioso bolo de chocolate com cobertura de ganache.</p>
+    <p class="produto-preco">R$ 45,00</p>
+    <button class="produto-botao">Comprar</button>
+</div>
+
+<div class="produto5">
+    <img src="bolo-de-chocolate-decorado-com-chantilly-e-cerejas-Foto-Food-Porn-Diary.jpg" alt="Bolo de Chocolate" class="produto-imagem">
+    <h2 class="produto-titulo">Bolo de Chocolate</h2>
+    <p class="produto-descricao">Delicioso bolo de chocolate com cobertura de ganache.</p>
+    <p class="produto-preco">R$ 45,00</p>
+    <button class="produto-botao">Comprar</button>
+</div>
+
+<main>
+    <article>
+        <h3 style="color: rgb(252, 246, 189)">Sobre Nós</h3>
+        <p>Entrar na nossa loja de doces é como abrir um baú de tesouros açucarados. O aroma de chocolate, caramelo e baunilha envolve o ar, despertando memórias de infância e sorrisos espontâneos.
+            
+            Aqui, cada doce conta uma história. Os pirulitos coloridos lembram tardes ensolaradas, os bombons artesanais trazem o carinho de receitas passadas de geração em geração, e as balas mastigáveis fazem qualquer adulto se sentir criança novamente.
+            
+            Seja para adoçar o dia, presentear alguém especial ou simplesmente se entregar a um momento de felicidade, temos a escolha perfeita para você. Afinal, a vida fica muito melhor com um toque de doçura!</p>
+    </article>
+</main>
+<footer>
+    <p>&copy; 2025 Rainha dos doces</p>
+</footer>
+
+<!-- JavaScript para o carrossel -->
+<script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        const slides = document.querySelectorAll('.carousel-item');
+        if (index >= slides.length) currentSlide = 0;
+        if (index < 0) currentSlide = slides.length - 1;
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === currentSlide) slide.classList.add('active');
+        });
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+
+    // Troca de slide automática a cada 5 segundos
+    setInterval(nextSlide, 5000);
+</script>
+</body>
+</html>
